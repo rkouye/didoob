@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-##To-do
+## About
+    [Demo](https://github.io/semako-kouye/didoob)
+## To-do
     - Link for invitation to vote
     - License
     - Save last used network provider
