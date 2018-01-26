@@ -16,11 +16,11 @@ const persistContractsOfInterest = (contractsOfInterest) => {
 
 const storeShape = {
     userAddress : "",
-    provider : Web3.givenProvider?Web3.givenProvider.constructor.name : "http://localhost:8545",
+    provider : Web3.givenProvider?Web3.givenProvider.constructor.name : "",
     contractsOfInterest : getContractsOfInterest(),
     votes : {}
 }
-Web3Client.setProvider(storeShape.provider);
+if(storeShape.provider) Web3Client.setProvider(storeShape.provider);
 
 export const VotesListStore = createStore(VotesListReducer, storeShape, applyMiddleware(thunkMiddleware, createLogger()));
 

@@ -8,6 +8,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     - License
     - Save last used network provider
     - Fix typo
+    - Add documentation about Ganache
+    - Close contract
     - Add english translations
 
 ## Note

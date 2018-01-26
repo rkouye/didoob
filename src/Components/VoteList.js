@@ -34,9 +34,9 @@ class VoteList extends Component {
                     <Col sm="8">
                     <Creatable 
                         isValidNewOption={ ({label}) => Web3Client.web3.utils.isAddress(label) }
-                        promptTextCreator={(label) => `Accéder au contrat situé à l'adresse ${label} ?` }
+                        promptTextCreator={(label) => `Accéder au sondage situé à l'adresse ${label} ?` }
                         onNewOptionClick={({value})=> this.addCoI(value)} 
-                        placeholder="Entrez ici l'adresse d'un contrat pour y accéder."
+                        placeholder="Entrez ici l'adresse d'un sondage pour y accéder."
                         optionRenderer={({value})=> (<span><AccountDisplay account={value} contract/></span>)}
                         options={this.props.cOI.map( contract => ({ label : contract.address, value : contract.address }))}
                         noResultsText="Adresse invalide."

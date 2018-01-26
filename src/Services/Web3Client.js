@@ -3,6 +3,9 @@ import TimeSlotVoteTruffleMeta from './TimeSlotVote.json';
 import TruffleContract from 'truffle-contract';
 import 'babel-polyfill';
 
+const missingAccountErrorMessage = "Entrez d'abord l'adresse de votre compte Ethereum. (Plus haut, dans prérequis)";
+const missingProviderMessage = "Connectez vous d'abord à un noeud Ethereum. (Plus haut, dans prérequis)";
+
 let web3 = new Web3("");
 
 let TimeSlotVote = TruffleContract(TimeSlotVoteTruffleMeta);
@@ -31,7 +34,7 @@ function setProvider(provider){
 let options = {
     from : "",
     gas: 4712388,
-    gasPrice: 100000000000
+    gasPrice: 3000000000
 };
 
   /**
@@ -42,7 +45,10 @@ let options = {
    * @returns {Promise<string>} A promise that resolves to the newly deployed contract's address 
    */
 function deployVote (vote){
-    if(!web3.utils.isAddress(options.from)) return Promise.reject(new Error("Entrez d'abord l'adresse de votre compte Ethereum."))
+    
+    if(!web3.currentProvider) return Promise.reject(new Error(missingProviderMessage));
+    if(!web3.utils.isAddress(options.from)) return Promise.reject(new Error(missingAccountErrorMessage))
+
     return _TimeSlotVote.deploy({
         data: TimeSlotVoteTruffleMeta.bytecode,
         arguments : [vote.duration_in_ms, vote.voters]
@@ -70,6 +76,8 @@ function setUserAccountAddress(address){
  * @returns {Promise<{}>}
  */
 async function getVoteInfo(address){
+
+    if(!web3.currentProvider) return Promise.reject(new Error(missingProviderMessage));
     
     let instance = TimeSlotVote.at(address);
     //Prefetch
@@ -117,6 +125,9 @@ async function getVoteInfo(address){
  * @param {number} start
  */
 function makeProposalAsOwnerFor(address, start){
+    if(!web3.currentProvider) return Promise.reject(new Error(missingProviderMessage));
+    if(!web3.utils.isAddress(options.from)) return Promise.reject(new Error(missingAccountErrorMessage))
+    
     let instance = TimeSlotVote.at(address);
     return instance.makeProposalAsOwner([start], options);
 }
@@ -127,16 +138,25 @@ function makeProposalAsOwnerFor(address, start){
  * @param {number} start
  */
 function makeProposalAsVoterFor(address, start){
+    if(!web3.currentProvider) return Promise.reject(new Error(missingProviderMessage));
+    if(!web3.utils.isAddress(options.from)) return Promise.reject(new Error(missingAccountErrorMessage))
+    
     let instance = TimeSlotVote.at(address);
     return instance.makeProposalAsVoter([start], options);
 }
 
 function voteForProposal(address, proposalIndex){
+    if(!web3.currentProvider) return Promise.reject(new Error(missingProviderMessage));
+    if(!web3.utils.isAddress(options.from)) return Promise.reject(new Error(missingAccountErrorMessage))
+    
     let instance = TimeSlotVote.at(address);
     return instance.voteForProposalAtIndex([proposalIndex], options);
 }
 
 function approveProposal(address, proposalIndex){
+    if(!web3.currentProvider) return Promise.reject(new Error(missingProviderMessage));
+    if(!web3.utils.isAddress(options.from)) return Promise.reject(new Error(missingAccountErrorMessage))
+    
     let instance = TimeSlotVote.at(address);
     return instance.approveProposal([proposalIndex], options);
 }

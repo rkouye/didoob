@@ -14,7 +14,10 @@ class NetworkManagement extends Component {
         const givenProvider = Web3.givenProvider?Web3.givenProvider.constructor.name : "";
         
         let options = [
-
+            {label : "http://localhost:8545" , value  : "http://localhost:8545"},
+            {label : "http://localhost:7545" , value  : "http://localhost:7545"},
+            {label : "https://localhost:8545" , value  : "https://localhost:8545"},
+            {label : "https://localhost:7545" , value  : "https://localhost:7545"},
         ];
 
         if(givenProvider) options.push({ label : givenProvider, value : givenProvider});

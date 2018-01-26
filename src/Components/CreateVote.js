@@ -5,6 +5,7 @@ import {createBinderFor} from '../Utilities/FieldBinding';
 import PropTypes from 'prop-types';
 import AccountDisplay from './AccountDisplay';
 import Loader from './Loader'
+import { Link } from 'react-router-dom';
 /**
  * Component to create a vote
  * 
@@ -67,7 +68,7 @@ class CreateVote extends Component {
 
                    <FormGroup row>
                       <Col xs="12" sm="12">
-                        <Label>Liste des comptes Ethereum authorisés à voter</Label>
+                        <Label>Quels comptes Ethereum sont authorisés à voter ?</Label>
                        </Col>
                        <Col xs="12" sm="8">
                         <Input type="text" {...this.bindAs("newAddress")} 
@@ -100,8 +101,9 @@ class CreateVote extends Component {
                     <Alert color="success">
                         Contrat de vote déployé à l'addresse <b><AccountDisplay account={this.state.task.address} contract /></b>.<br/>
                         Chaque ÐApp possède une addresse unique sur le réseau ou elle a été déployé. Les particpants ont besoin de
-                        cette addresse pour voter ou faire des propositions. Donc partager là ! Pour améliorer votre expérience, DiDooB sauvegarde dans
-                        votre navigateur les adresses des contrats que vous avez déployé. Mais si vous voulez plus de sécurité, faites en une copie.
+                        cette addresse pour voter ou faire des propositions.
+                        <br/>
+                        Partager leur ce lien <Link to={'/vote/'+this.state.task.address} innerRef={ (ref)=>{ if(ref) ref.innerText = ref.href} } />.
                     </Alert>
                    }
                    { this.state.task.error &&

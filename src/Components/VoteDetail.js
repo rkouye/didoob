@@ -25,7 +25,7 @@ class VoteDetail extends Component {
 
     componentDidMount(){
         this.refreshDetail();
-        this.props.setInterval(this.refreshDetail, 20*1000);
+        this.props.setInterval(this.refreshDetail, 5*1000);
     }
 
     refreshDetail= () => {
@@ -90,7 +90,8 @@ class VoteDetail extends Component {
                                     </div>}
                                 </div>}
                                 <div>
-                                    <Label>Faire une proposition</Label>
+                                    <br/>
+                                    <Label color="primary"><b>Proposer un créneau ?</b></Label>
                                     <FormGroup row >
                                         <Col sm={10}>
                                             <DateTime value={this.state.proposal} onChange={(value)=>{this.setState({proposal : value})}}/>
