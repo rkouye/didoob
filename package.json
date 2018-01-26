@@ -2,7 +2,7 @@
   "name": "didoob",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://github.io/semako-kouye/didoob",
+  "homepage": "https://semako-kouye.github.io/didoob",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0-beta.2",
