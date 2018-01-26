@@ -88,7 +88,7 @@ class CreateVote extends Component {
                    <ListGroup>
                       {this.state.voters.map(voter => <ListGroupItem key={voter}><AccountDisplay account={voter}/></ListGroupItem>)}
                    </ListGroup>
-                   <p className="text-center"><a href="#">Lire le code du contrat</a></p>
+                   <p className="text-center"><a target="blank" href="https://github.com/semako-kouye/didoob/blob/master/truffle/contracts/TimeSlotPlanning.sol">Lire le code du contrat</a></p>
                    <hr/>
                    <Button block disabled={this.state.task.isBusy} color="primary">
                         {this.state.task.isBusy?

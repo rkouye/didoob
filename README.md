@@ -1,14 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## About
-[Demo](https://semako-kouye.github.io/didoob)
+It is all in french.
+[Homepage](https://semako-kouye.github.io/didoob)
 
 ## To-do
-    - Link for invitation to vote
     - License
     - Save last used network provider
-    - Fix typo
-    - Add documentation about Ganache
+    - Fix a lot of typo :/
     - Close contract
     - Add english translations
 
