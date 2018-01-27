@@ -3,8 +3,8 @@ import TimeSlotVoteTruffleMeta from './TimeSlotVote.json';
 import TruffleContract from 'truffle-contract';
 import 'babel-polyfill';
 
-const missingAccountErrorMessage = "Entrez d'abord l'adresse de votre compte Ethereum. (Plus haut, dans prérequis)";
-const missingProviderMessage = "Connectez vous d'abord à un noeud Ethereum. (Plus haut, dans prérequis)";
+const missingAccountErrorMessage = "Entrez d'abord l'adresse de votre compte Ethereum. (Plus haut, cliquez sur Connexion)";
+const missingProviderMessage = "Connectez vous d'abord à un noeud Ethereum. (Plus haut, cliquez sur Connexion)";
 
 let web3 = new Web3("");
 

@@ -47,7 +47,7 @@ class WelcomePage extends Component {
                 <div style={style_wrapper}>
                     <div style={style_container} ref={ container => container?new ParticleNetwork(container, options):false }></div>
                 </div>
-                <h1 style={style_header} className="display-1 text-center"><a href="/" style={{textDecoration : 'none', color : 'black'}}>DiDooB</a></h1>
+                <h1 style={style_header} className="display-1 text-center"><a href="#/" style={{textDecoration : 'none', color : 'black'}}>DiDooB</a></h1>
                     <p className="lead text-center">
                         <b>D</b>idoob <b>i</b>s <b>Do</b>odle <b>o</b>n <b>B</b>lockchain 
                 </p>
