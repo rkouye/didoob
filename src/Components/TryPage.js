@@ -7,6 +7,7 @@ import connect from 'react-redux/lib/connect/connect';
 import NotificationSystem from 'react-notification-system';
 import { deployVote } from '../Data/Actions';
 import Link from 'react-router-dom/Link';
+import ConnectionPage from './ConnectionPage';
 
 class TryPage extends Component {
     render() {
@@ -16,10 +17,10 @@ class TryPage extends Component {
         )(CreateVote);
         return (
             <div>
-                <div style={{width : '95%', margin : 'auto', maxWidth : '1000px', padding : '.5em'}}>
-
-                    <h1 className="display-3 text-center">Comment créer un sondage ? </h1>
+                    <h1 className="display-3 text-center">Créer un sondage</h1>
                     <p className="text-center text-muted"> <Link to="/vote">Je veux juste voter</Link></p>
+                    
+                    <ConnectionPage/>
                      
                     <h2 style={{marginTop : '2em'}}><span className="badge badge-secondary">1</span> Je déploie mon sondage sur un réseau Ethereum.</h2>
                     <p style={{margin : '3%'}} className="text-justify text-muted">Chaque <i>sondage</i> est un contrat de vote implémenté sous la forme d'une application décentralisée déployée sur un réseau Ethereum.
@@ -37,8 +38,6 @@ class TryPage extends Component {
                     <p style={{margin : '3%'}} className="text-justify text-muted">Vous pouvez accéder à un sondage en entrant son addresse ci dessous.</p>
                     
                     <VoteList />
-                </div>
-
                 <NotificationSystem ref={ns => this.ns = ns} />
             </div>
         );
