@@ -27,7 +27,7 @@ export const deployVote = (ns,voteInfo, callback) => (dispatch) => {
         dispatch(fetchVoteInfo(address));
         dispatch(addCoI(address));
         ns.addNotification({
-            message : "Contrat de VOTE déployé à l'addresse "+address,
+            message : "Contrat de VOTE déployé à l'adresse "+address,
             level : "success",
             autoDismiss : 0
         });
@@ -107,7 +107,7 @@ export function makeProposalAsOwnerFor(dateUnix,address,ns){
           dispatch(fetchVoteInfo(address));
           dispatch(removeVotePendingTx(address));
           ns.addNotification({
-           message : `Proposition faites pour le contrat à l'addresse ${address}. Hash de la transaction ${tx}.`,
+           message : `Proposition faites pour le contrat à l'adresse ${address}. Hash de la transaction ${tx}.`,
            level : "success",
            autoDismiss : 0
          });
@@ -125,7 +125,7 @@ export function makeProposalAsVoterFor(dateUnix,address,ns){
           dispatch(fetchVoteInfo(address));
           dispatch(removeVotePendingTx(address));
           ns.addNotification({
-           message : `Proposition faites pour le contrat à l'addresse ${address}. Hash de la transaction ${tx}.`,
+           message : `Proposition faites pour le contrat à l'adresse ${address}. Hash de la transaction ${tx}.`,
            level : "success",
            autoDismiss : 0
          });
@@ -143,7 +143,7 @@ export function voteForProposal(index, address, ns){
         dispatch(fetchVoteInfo(address));
         dispatch(removeVotePendingTx(address));
         ns.addNotification({
-            message : `Vote fait pour la proposition ${index+1} du contrat à l'addresse ${address}. Hash de la transaction ${tx}.`,
+            message : `Vote fait pour la proposition ${index+1} du contrat à l'adresse ${address}. Hash de la transaction ${tx}.`,
             level : "success",
             autoDismiss : 0
         });
@@ -161,7 +161,7 @@ export function approveProposal(index, address, ns){
         dispatch(fetchVoteInfo(address));
         dispatch(removeVotePendingTx(address));
         ns.addNotification({
-            message : `Approbation donné pour la proposition ${index+1} du contrat à l'addresse ${address}. Hash de la transaction ${tx}.`,
+            message : `Approbation donné pour la proposition ${index+1} du contrat à l'adresse ${address}. Hash de la transaction ${tx}.`,
             level : "success",
             autoDismiss : 0
         });

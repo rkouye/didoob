@@ -73,7 +73,7 @@ class CreateVote extends Component {
                        <Col xs="12" sm="8">
                         <Input type="text" {...this.bindAs("newAddress")} 
                             valid={this.state.newAddress$isDirty? Web3Client.web3.utils.isAddress(this.state.newAddress) : undefined }/>
-                            <FormFeedback>Cette addresse n'est pas valide.</FormFeedback>
+                            <FormFeedback>Cette adresse n'est pas valide.</FormFeedback>
                        </Col>
                        <Col xs="12" sm="4">
                         <Button type="button" block onClick={this.addNewVoter}>Ajouter</Button>
@@ -99,9 +99,9 @@ class CreateVote extends Component {
                    
                    { this.state.task.address &&
                     <Alert color="success">
-                        Contrat de vote déployé à l'addresse <b><AccountDisplay account={this.state.task.address} contract /></b>.<br/>
-                        Chaque ÐApp possède une addresse unique sur le réseau ou elle a été déployé. Les particpants ont besoin de
-                        cette addresse pour voter ou faire des propositions.
+                        Contrat de vote déployé à l'adresse <b><AccountDisplay account={this.state.task.address} contract /></b>.<br/>
+                        Chaque ÐApp possède une adresse unique sur le réseau ou elle a été déployé. Les particpants ont besoin de
+                        cette adresse pour voter ou faire des propositions.
                         <br/>
                         Partager leur ce lien <Link to={'/vote/'+this.state.task.address} innerRef={ (ref)=>{ if(ref) ref.innerText = ref.href} } />.
                     </Alert>

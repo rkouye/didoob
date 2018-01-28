@@ -68,7 +68,7 @@ class UserAccount extends Component {
                             </ButtonDropdown>
                         </InputGroupButton>)
                      }
-                     <FormFeedback>Cette addresse n'est pas valide.</FormFeedback>
+                     <FormFeedback>Cette adresse n'est pas valide.</FormFeedback>
                     </InputGroup>
                 
             </div>

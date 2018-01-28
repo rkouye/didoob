@@ -17,7 +17,7 @@ class VotePage extends Component {
                     { !Web3Client.web3.utils.isAddress(this.props.address)? 
                     <div>
                         <p style={{margin : '3%'}} className="text-justify text-muted">Si vous avez été invité à voter sur un sondage, vous pouvez y accéder
-                         en entrant son addresse ci dessous.</p>
+                         en entrant son adresse ci dessous.</p>
                         <VoteList />
                     </div>
                     :

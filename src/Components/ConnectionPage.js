@@ -42,7 +42,7 @@ class ConnectionPage extends Component {
                     <ModalBody>
                     <p style={{margin : '3%'}} className="text-justify text-muted">Si vous ne savez pas comment, il vous suffit d'installer <a target="blank" href="https://metamask.io">Metamask</a>. 
                         C'est un portefeuille de comptes Ethereum avec plusieurs autres fonctionnalités pratiques.
-                        DiDooB détecte automatiquement Metamask et récupère les addresses de vos comptes. Si vous avez du mal à installer Metamask (ie : Sur Internet Explorer),
+                        DiDooB détecte automatiquement Metamask et récupère les adresses de vos comptes. Si vous avez du mal à installer Metamask (ie : Sur Internet Explorer),
                         une autre alternative est d'utiliser une blockchain privé sur votre PC. Exemple <a href="http://truffleframework.com/ganache/">Ganache</a>, et de copier ensuite l'url ci-dessous.</p>
 
                         <Card style={{margin : '3%'}} body>

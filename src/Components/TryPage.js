@@ -35,7 +35,7 @@ class TryPage extends Component {
                      
 
                     <h2 style={{marginTop : '2em'}}><span className="badge badge-secondary">2</span> Je peux faire des propositions et voter.</h2>
-                    <p style={{margin : '3%'}} className="text-justify text-muted">Vous pouvez accéder à un sondage en entrant son addresse ci dessous.</p>
+                    <p style={{margin : '3%'}} className="text-justify text-muted">Vous pouvez accéder à un sondage en entrant son adresse ci dessous.</p>
                     
                     <VoteList />
                 <NotificationSystem ref={ns => this.ns = ns} />
