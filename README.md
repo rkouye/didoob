@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About
 It is all in french.
-[Homepage](https://semako-kouye.github.io/didoob)
+[Homepage](https://rkouye.github.io/didoob)
 
 ## To-do
     - License
